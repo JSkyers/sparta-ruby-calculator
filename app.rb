@@ -37,7 +37,11 @@ def div_mode
   $stdout.puts "Number 2?"
   $stdout.flush
   num2 = $stdin.gets.chomp.to_i
-  puts num1 / num2
+  if num1 % num2 == 0
+    puts num1 / num2
+  else
+    puts "Number 1 is not divisible by Number 2"
+  end
 end
 
 def power_mode
